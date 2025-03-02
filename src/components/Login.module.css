@@ -1,0 +1,181 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  position: relative;
+  background: var(--gray-500);
+  width: 90%;
+  max-width: 35rem;
+  height: 90%;
+  max-height: 45rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid var(--green-500-30-opacity);
+  flex-direction: column;
+}
+
+.container img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  height: auto;
+}
+
+.homeButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+.homeButton img,
+.homeButton svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.homeButton:hover {
+  opacity: 0.8;
+}
+
+.loginInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loginForm input {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: var(--gray-300);
+  height: 3.5rem;
+  padding: 1rem;
+  color: var(--white);
+  width: 100%;
+}
+
+.loginInfo a {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--green-300);
+  font-size: 0.75rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.loginButtonContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.loginButton {
+  background: var(--green-500);
+  height: 3.5rem;
+  color: var(--white);
+  display: flex;
+  width: 100%;
+  max-width: 7.625rem;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--green-500);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.loginButton:hover {
+  transform: scale(1.05);
+  background: var(--green-400);
+}
+
+.divider {
+  border: 1px solid var(--gray-200);
+  width: 100%;
+  max-width: 28rem;
+  margin-top: 2rem;
+}
+
+.registerButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.registerButton {
+  height: 3.5rem;
+  padding: 1rem;
+  color: var(--green-500);
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid var(--green-500);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.registerButton:hover {
+  transform: scale(1.05);
+  background: var(--green-500);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+    height: 90%;
+  }
+
+  .loginForm input {
+    height: 3rem;
+  }
+
+  .loginButton,
+  .registerButton {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginInfo {
+    max-width: 100%;
+  }
+
+  .loginButton,
+  .registerButton {
+    width: 100%;
+  }
+
+  .container img {
+    max-width: 70%;
+  }
+}

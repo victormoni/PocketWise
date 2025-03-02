@@ -1,0 +1,147 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  background: var(--gray-500);
+  width: 90%;
+  max-width: 35rem;
+  height: 90%;
+  max-height: 45rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid var(--green-500-30-opacity);
+  flex-direction: column;
+}
+
+.container img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  height: auto;
+}
+
+.registerInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.registerForm input {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: var(--gray-300);
+  height: 3.5rem;
+  padding: 1rem;
+  color: var(--white);
+  width: 100%;
+}
+
+.divider {
+  border: 1px solid var(--gray-200);
+  width: 100%;
+  max-width: 28rem;
+  margin-top: 2rem;
+}
+
+.registerButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.registerButton {
+  height: 3.5rem;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--green-500);
+  border-radius: 12px;
+  border: 1px solid var(--green-500);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 15rem;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.registerButton:hover {
+  transform: scale(1.05);
+  background: var(--green-400);
+}
+
+.turnToLoginPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.turnBackButton {
+  height: 3.5rem;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--danger);
+  border-radius: 12px;
+  border: 1px solid var(--danger);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 15rem;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.turnBackButton:hover {
+  transform: scale(1.05);
+  background: var(--danger-hover);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .registerForm input {
+    height: 3rem;
+  }
+
+  .turnBackButton,
+  .registerButton {
+    height: 3.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .registerInfo {
+    max-width: 100%;
+  }
+
+  .turnBackButton,
+  .registerButton {
+    width: 100%;
+    max-width: none;
+  }
+
+  .container img {
+    max-width: 70%;
+  }
+}
