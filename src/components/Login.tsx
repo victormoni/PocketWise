@@ -10,7 +10,7 @@ export function LoginComponent() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <button className={styles.homeButton} onClick={() => navigate("/")}>
-          <HouseLine size={24} color="#808080"/>
+          <HouseLine size={24} color="#808080" weight="duotone"/>
         </button>
         <img src={logo} alt="logo" />
         <div className={styles.loginInfo}>
