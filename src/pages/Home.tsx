@@ -1,3 +1,7 @@
+import { HomeComponent } from "../components/Home"
+
 export function Home() {
-    return <h1>Home</h1>
+    return (
+        <HomeComponent />
+    )
 }
