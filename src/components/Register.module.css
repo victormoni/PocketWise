@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem;
 }
 
@@ -10,8 +10,6 @@
   background: var(--gray-500);
   width: 90%;
   max-width: 35rem;
-  height: 90%;
-  max-height: 45rem;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -25,7 +23,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  max-width: 80%;
+  width: 20%;
+  max-width: 10rem;
   height: auto;
 }
 
@@ -86,6 +85,15 @@
   background: var(--green-400);
 }
 
+.registerButton:disabled {
+  background: var(--green-300);
+  cursor: not-allowed;
+  opacity: 0.4;
+  color: var(--white);
+  border: 1px solid var(--green-400);
+}
+
+
 .turnToLoginPage {
   display: flex;
   justify-content: center;
@@ -112,11 +120,36 @@
   background: var(--danger-hover);
 }
 
+.passwordRules {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  color: var(--danger);
+}
+
+.passwordRules li {
+  list-style: none;
+}
+
+.validRule {
+  color: var(--green-400);
+  text-decoration: line-through;
+}
+
+.invalidRule {
+  color: var(--danger)
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 95%;
     padding: 1.5rem;
-    height: auto;
   }
 
   .registerForm input {
@@ -125,8 +158,13 @@
 
   .turnBackButton,
   .registerButton {
-    height: 3.5rem;
+    height: 4rem;
     max-width: 100%;
+  }
+
+  .container img {
+    width: 20%;
+    max-width: 150px;
   }
 }
 
@@ -138,10 +176,10 @@
   .turnBackButton,
   .registerButton {
     width: 100%;
-    max-width: none;
   }
 
   .container img {
-    max-width: 70%;
+    width: 20%;
+    max-width: 120px;
   }
 }
