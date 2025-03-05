@@ -118,10 +118,7 @@ export function RegisterComponent() {
             )}
           </div>
         </div>
-
-        {/* Exibir erro caso ocorra */}
         {error && <p className={styles.error}>{error}</p>}
-
         <div className={styles.divider}></div>
         <div className={styles.registerButtonContainer}>
           <button

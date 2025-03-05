@@ -1,0 +1,29 @@
+.container {
+  background: var(--gray-700);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12rem;
+  padding: 0 2rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--gray-100);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    height: auto;
+  }
+
+  .container a {
+    font-size: 1rem;
+  }
+}

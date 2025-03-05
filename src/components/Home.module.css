@@ -1,55 +1,118 @@
 .wrapper {
   width: 100%;
-  display: grid;
-  grid-template-rows: 99px 1fr;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   background: var(--gray-700);
   padding: 1rem;
-  max-height: 12.5rem;
   justify-content: space-between;
+  max-height: 12.5rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo h2 {
-    color: var(--white);
+  color: var(--white);
 }
 
 .logo img {
-  display: flex;
   max-height: 3rem;
   margin-left: 1rem;
 }
 
 .login {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .login img {
-    max-width: 2rem;
-    margin-right: 1rem;
+  max-width: 2rem;
+  margin-right: 1rem;
 }
 
 .homeButton {
-    cursor: pointer;
-    background: none;
-    border: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background: var(--gray-800);
+  color: var(--white);
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-  .content {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 1rem;
+  }
+
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .footer {
+    min-height: 6rem;
   }
 }
