@@ -12,21 +12,28 @@ export function LoginComponent() {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
-const handleLogin = async () => {
-  setError(null);
-  try {
-    const data = await loginUser(email, password);
-    
-    localStorage.setItem("token", data.token.token);
-    localStorage.setItem("user", JSON.stringify({ id: data.id, fullName: data.fullName, email: data.email }));
+  const handleLogin = async () => {
+    setError(null);
+    try {
+      const data = await loginUser(email, password);
 
-    navigate("/dashboard");
-  } catch (error) {
-    console.log(error);
-    
-    setError('Usuário ou senha incorretos');
-  }
-};
+      localStorage.setItem("token", data.token.token);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          id: data.id,
+          fullName: data.fullName,
+          email: data.email,
+        })
+      );
+
+      navigate("/dashboard");
+    } catch (error) {
+      console.log(error);
+
+      setError("Usuário ou senha incorretos");
+    }
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -51,16 +58,31 @@ const handleLogin = async () => {
             />
           </div>
           {error && <p className={styles.error}>{error}</p>}
-          <a href="https://exemplo.com">Esqueceu sua senha?</a>
+          <div className={styles.forgotPassword}>
+            <button
+              type="submit"
+              onClick={() => navigate("/forgot-password")}
+            >
+              Esqueceu sua senha?
+            </button>
+          </div>
           <div className={styles.loginButtonContainer}>
-            <button type="submit" className={styles.loginButton} onClick={handleLogin}>
+            <button
+              type="submit"
+              className={styles.loginButton}
+              onClick={handleLogin}
+            >
               Entrar
             </button>
           </div>
         </div>
         <div className={styles.divider}></div>
         <div className={styles.registerButtonContainer}>
-          <button type="submit" className={styles.registerButton} onClick={() => navigate("/register")}>
+          <button
+            type="submit"
+            className={styles.registerButton}
+            onClick={() => navigate("/register")}
+          >
             Cadastre-se agora
           </button>
         </div>

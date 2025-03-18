@@ -114,6 +114,27 @@
   background: var(--green-400);
 }
 
+.forgotPassword {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--green-300);
+  font-size: 0.75rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  background: none;
+}
+
+.forgotPassword button {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--green-300);
+  font-size: 0.75rem;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
 .divider {
   border: 1px solid var(--gray-200);
   width: 100%;
