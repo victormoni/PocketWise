@@ -6,7 +6,7 @@ export function HomeFooter() {
         <div className={styles.container}>
             <Link to="/about">Sobre</Link>
             <a href='https://www.linkedin.com/in/patrick-meirelles/' target='/blank'>Linkedin</a>
-            <a href='https://wa.me/11953936819' target='/blank'>Fale Conosco</a>
+            <a href='https://wa.me/' target='/blank'>Fale Conosco</a>
             {/* <a href=''>Créditos</a>  Page turned off until i got some idea*/}
         </div>
     )
