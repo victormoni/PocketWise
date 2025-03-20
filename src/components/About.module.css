@@ -111,10 +111,6 @@
     font-size: 0.5rem;
   }
 
-  .homeButton {
-    margin: 1rem 0;
-  }
-
   .profileContent {
     display: flex;
     align-items: center;
@@ -151,15 +147,11 @@
   }
 
   .container h2 {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .container p {
-    font-size: 0.5rem;
-  }
-
-  .homeButton {
-    margin: 1rem 0;
+    font-size: 0.875rem;
   }
 
   .profileContent {
@@ -183,4 +175,20 @@
   .author {
     margin: 0;
   }
+}
+
+@media (max-width: 480px) {
+  .profileContent a {
+    height: 20%;
+  }
+
+  .profileContent {
+    margin: 0;
+  }
+
+  .container h2 {
+    padding: 0;
+    margin: 0;
+  }
+
 }
