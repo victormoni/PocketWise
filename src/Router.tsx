@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Pages } from "./pages/index";
 import { PrivateRoute } from "./routes/PrivateRoute";
+import SidebarLayout from "./components/layouts/Sidebar";
 
 export function Router() {
   return (
@@ -12,8 +13,13 @@ export function Router() {
       <Route path="/forgot-password" element={<Pages.ForgotPassword />} />
       <Route path="/reset-password" element={<Pages.ResetPassword />} />
       <Route element={<PrivateRoute />}>
-          <Route path="/dashboard" element={<Pages.Dashboard />} />
+        <Route element={<SidebarLayout />}>
+          <Route path="/dashboard" element={<Pages.Dashboards.DashboardHome />} />
+          <Route path="/dashboard/by-category" element={<Pages.Dashboards.DashboardCategory />} />
+          <Route path="/dashboard/year-resume" element={<Pages.Dashboards.DashboardYearResume />} />
         </Route>
+      </Route>
     </Routes>
   );
 }
+

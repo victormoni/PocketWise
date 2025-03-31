@@ -1,9 +1,6 @@
-import styles from "./styles/Dashboard.module.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getSummaryTransactionsMonth, getUserData } from "../services/api";
-import { Button } from "./../components/Button";
-import { Card } from "./../components/Card";
 
 interface ITransaction {
   amount: number;
@@ -24,7 +21,7 @@ interface ITransaction {
 //   category: string;
 // }
 
-export function Dashboard() {
+export function DashboardDeprecated() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState<{
@@ -112,7 +109,7 @@ export function Dashboard() {
 
   return (
     <>
-      <div className={styles.wrapper}>
+      {/* <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.header}>
             <h1>Bem-vindo, {user.fullName}!</h1>
@@ -155,7 +152,7 @@ export function Dashboard() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
