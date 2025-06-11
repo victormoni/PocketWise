@@ -21,7 +21,7 @@
 //   category: string;
 // }
 
-// export function DashboardDeprecated() {
+export function DashboardDeprecated() {
 //   const navigate = useNavigate();
 
 //   const [user, setUser] = useState<{
@@ -107,8 +107,8 @@
   //     return acc;
   //   }, [] as ITransactionsGrouped[]);
 
-  // return (
-  //   <>
+  return (
+    <>
       {/* <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.header}>
@@ -153,6 +153,5 @@
           </div>
         </div>
       </div> */}
-    </>
-{/*   ); */}
-// }
+    </>);
+}
