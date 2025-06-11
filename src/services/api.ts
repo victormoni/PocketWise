@@ -69,6 +69,24 @@ export const getUserData = async (token: string) => {
   }
 };
 
+export const logOut = async (token: string) => {
+  try {
+    const response = await axios.post(
+      `${API_URL}/user/logout`, {},
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "x-api-key": API_KEY,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Erro ao fazer logout do usuário.");
+  }
+};
+
 export const forgotPassword = async (email: string) => {
   try {
     const response = await axios.post(
@@ -114,5 +132,99 @@ export const getSummaryTransactionsMonth = async (
     console.log(error);
 
     throw new Error("Erro ao buscar dados do usuário.");
+  }
+};
+
+export const getSummaryTransactionsMonthResume = async (
+  token: string,
+  month?: string
+) => {
+  const getYear = new Date().getFullYear()
+  const year = month ? `year?year=${month}` : `year?year=${getYear}`;
+  try {
+    const response = await axios.get(
+      `${API_URL}/transactions/grouped/by/year/resume/${year}`,
+      {
+        headers: { Authorization: `Bearer ${token}`, 'x-api-key': API_KEY },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+
+    throw new Error("Erro ao buscar dados do usuário.");
+  }
+};
+
+export const getCategories = async (token: string) => {
+  try {
+    const response = await axios.get(`${API_URL}/category`, {
+      headers: { 
+        Authorization: `Bearer ${token}`,
+        'x-api-key': API_KEY 
+      }
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Erro ao buscar categorias.");
+  }
+};
+
+export const getModalities = async (token: string) => {
+  try {
+    const response = await axios.get(`${API_URL}/modality`, {
+      headers: { 
+        Authorization: `Bearer ${token}`,
+        'x-api-key': API_KEY 
+      }
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Erro ao buscar modalidades.");
+  }
+};
+
+export const getGoals = async (token: string) => {
+  try {
+    const response = await axios.get(`${API_URL}/goals`, {
+      headers: { 
+        Authorization: `Bearer ${token}`,
+        'x-api-key': API_KEY 
+      }
+    });
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Erro ao buscar metas.");
+  }
+};
+
+export const createTransaction = async (token: string, data: {
+  transaction: string;
+  installments: number;
+  date: string;
+  amount: number;
+  categoryId: number;
+  modalityId: number;
+  goalId: number | null;
+  isExpense: number;
+}) => {
+  try {
+    const response = await axios.post(
+      `${API_URL}/transactions/store`,
+      data,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'x-api-key': API_KEY
+        }
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Erro ao criar transação.");
   }
 };
