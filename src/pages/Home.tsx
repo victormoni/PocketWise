@@ -98,8 +98,8 @@ export function Home() {
       <footer className="w-full h-full">
         <div className="h-auto flex flex-col p-4 items-center text-white font-bold bg-[#2E7D32] justify-center gap-8 lg:gap-48 lg:h-20 lg:flex-row md:h-20 md:gap-48 md:flex-row">
           <Link to="/about" className="hover:underline text-sm">Sobre</Link>
-          <Link to='https://www.linkedin.com/in/patrick-meirelles/' target='/blank' className="hover:underline sm:text-sm">Linkedin</Link>
-          <Link to='https://wa.me/' target='/blank' className="hover:underline sm:text-sm">Fale Conosco</Link>
+          <Link to='https://www.linkedin.com/in/victormoni/' target='/blank' className="hover:underline sm:text-sm">Linkedin</Link>
+          <Link to='https://wa.me/5511943936479' target='/blank' className="hover:underline sm:text-sm">Fale Conosco</Link>
         </div>
       </footer>
     </div>
